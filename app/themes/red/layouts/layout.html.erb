@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @theme_name.capitalize %> Website</title>
+  <%= stylesheet_link_tag  "#{@theme_name}/styles" %>
+  <%= javascript_include_tag "#{@theme_name}/main" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+

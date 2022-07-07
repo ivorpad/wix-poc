@@ -1,0 +1,7 @@
+<h1>Hello <%= @theme_name %></h1>
+
+<% @sections.each do |section|  %>
+  <div style="border: 1px solid red; margin-bottom: 1rem; padding: .5rem;">
+    <%= sanitize section.content.body.to_plain_text.gsub("\u00A0", ""), tags: nil, attributes: %w(class href style height width) %>
+  </div>
+<% end %>

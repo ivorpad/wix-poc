@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @admin_theme %>
+
+<div>
+  <%= link_to "Edit this theme", edit_admin_theme_path(@admin_theme) %> |
+  <%= link_to "Back to themes", admin_themes_path %>
+
+  <%= button_to "Destroy this theme", @admin_theme, method: :delete %>
+</div>

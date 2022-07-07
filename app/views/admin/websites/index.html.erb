@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Websites</h1>
+
+<div id="admin_websites">
+  <% @admin_websites.each do |admin_website| %>
+    <%= render admin_website %>
+    <p>
+      <%= link_to "Show this website", website_path(admin_website.id, :preview => true), data: { turbo: false } %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New website", new_admin_website_path %>
